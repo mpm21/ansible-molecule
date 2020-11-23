@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ansible-molecule-test"
+      include_role:
+        name: "ansible-molecule-test"
