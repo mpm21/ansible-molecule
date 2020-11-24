@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Run the specified shell command
+      shell: 'ls -lrth'
+      register: result
+
+    - name: Display the outcome
+      debug:
+        msg: '{{result}}'
